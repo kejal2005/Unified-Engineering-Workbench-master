@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Packaged Workbench",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "${workspaceFolder}/Launch.exe"
+    },
+    {
+      "name": "Launch Backend (Debug)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/debug/src/backend/workbench_server.exe",
+      "args": ["--port", "8080", "--web-root", "${workspaceFolder}/app/web"],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": []
+    }
+  ]
+}
+
